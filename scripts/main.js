@@ -1,7 +1,7 @@
 const LINE_SELECTOR = ".running-line-text";
 const TEXT = "& mokslo sala > sveiki atvykę";
 const SPEED = 67;
-const INTERVAL = 250;
+const INTERVAL = 480;
 
 $(window).on("load", () => {
   const $line = $(LINE_SELECTOR);

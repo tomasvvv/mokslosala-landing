@@ -43,13 +43,13 @@ body {
 .running-line-placeholder {
   line-height: 1.2;
   font-family: "Gridas";
-  font-size: 67px;
+  font-size: 220px;
 }
 
 .running-line-text {
   color: black;
   font-family: "Gridas";
-  font-size: 67px;
+  font-size: 220px;
   white-space: nowrap;
   position: absolute;
   left: 0;
