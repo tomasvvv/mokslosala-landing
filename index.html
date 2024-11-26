@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="scripts/main.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    @font-face {
+      font-family: "Gridas";
+      src: url("fonts/MSDotGrid-Regular.woff");
+    }
+
+    html,
+    body {
+      background-color: black;
+      min-height: 100vh;
+      height: 100%;
+    }
+
+    .running-line {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .running-line-bg {
+      background: white;
+      width: 100%;
+      position: relative;
+      height: 200px;
+    }
+
+    .running-line-text {
+      color: black;
+      font-family: "Gridas";
+      font-size: 67px;
+      white-space: nowrap;
+      position: absolute;
+      left: 0;
+    }
+  </style>
+
+  <body>
+    <div class="running-line">
+      <div class="running-line-bg">
+        <div class="running-line-text">& mokslo sala > sveiki atvykę > welcome</div>
+      </div>
+    </div>
+  </body>
+</html>
