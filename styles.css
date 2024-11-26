@@ -696,6 +696,66 @@ body {
   line-height: 1.4;
 }
 
+.running-line2 {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 280px;
+}
+
+.running-line2-bg {
+  background: white;
+  width: 100%;
+  position: relative;
+}
+
+.running-line2-placeholder {
+  line-height: 1.2;
+  font-family: "Gridas";
+  font-size: 220px;
+}
+
+.running-line2-text {
+  color: black;
+  font-family: "Gridas";
+  font-size: 220px;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  line-height: 1.4;
+}
+
+.running-line3 {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 560px;
+}
+
+.running-line3-bg {
+  background: white;
+  width: 100%;
+  position: relative;
+}
+
+.running-line3-placeholder {
+  line-height: 1.2;
+  font-family: "Gridas";
+  font-size: 220px;
+}
+
+.running-line3-text {
+  color: black;
+  font-family: "Gridas";
+  font-size: 220px;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  line-height: 1.4;
+}
+
 @media (min-width: 768px) {
   .md\:block {
     display: block;
