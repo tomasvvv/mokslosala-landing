@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  height: 100%;
+}
+
+body {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("assets/landing.png");
+}
+
+@font-face {
+  font-family: "Gridas";
+  src: url("fonts/MSDotGrid-Regular.woff");
+}
+
+.button {
+  @apply border border-black/20;
+  @apply rounded-[100px];
+}
+
+.button-placeholder {
+  @apply bg-white;
+}
+
+.running-line {
+  width: 100%;
+  overflow: hidden;
+
+  @apply fixed bottom-0;
+}
+
+.running-line-bg {
+  background: white;
+  width: 100%;
+  position: relative;
+}
+
+.running-line-placeholder {
+  line-height: 1.2;
+  font-family: "Gridas";
+  font-size: 67px;
+}
+
+.running-line-text {
+  color: black;
+  font-family: "Gridas";
+  font-size: 67px;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  line-height: 1.4;
+}
