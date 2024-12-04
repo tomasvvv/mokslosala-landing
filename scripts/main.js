@@ -35,37 +35,37 @@ $(window).on("load", () => {
   }, INTERVAL);
 });
 
-$(window).on("load", () => {
-  const $line = $(LINE_SELECTOR);
-  const screenWidth = $(window).width();
-  const initialText = $line.text();
+// $(window).on("load", () => {
+//   const $line = $(LINE_SELECTOR);
+//   const screenWidth = $(window).width();
+//   const initialText = $line.text();
 
-  const pushText = () => {
-    const newText = $line.text() + " " + initialText;
-    $line.text(newText);
-  };
+//   const pushText = () => {
+//     const newText = $line.text() + " " + initialText;
+//     $line.text(newText);
+//   };
 
-  while ($line.width() < screenWidth) {
-    pushText();
-  }
-  pushText();
+//   while ($line.width() < screenWidth) {
+//     pushText();
+//   }
+//   pushText();
 
-  let oddEvenTracker = 1;
+//   let oddEvenTracker = 1;
 
-  setInterval(() => {
-    const currentLeft = parseInt($line.css("left").split("px")[0]) || 0;
+//   setInterval(() => {
+//     const currentLeft = parseInt($line.css("left").split("px")[0]) || 0;
 
-    oddEvenTracker = (oddEvenTracker + 1) % 2;
+//     oddEvenTracker = (oddEvenTracker + 1) % 2;
 
-    const newLeft = currentLeft - (oddEvenTracker ? 27.9 : 28.0);
+//     const newLeft = currentLeft - (oddEvenTracker ? 27.9 : 28.0);
 
-    if ($line.width() + newLeft < screenWidth) {
-      pushText();
-    }
+//     if ($line.width() + newLeft < screenWidth) {
+//       pushText();
+//     }
 
-    $line.css("left", `${newLeft}px`);
-  }, INTERVAL);
-});
+//     $line.css("left", `${newLeft}px`);
+//   }, INTERVAL);
+// });
 
 $(window).on("load", () => {
   const $line = $(".running-line2-text");

@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./*.{html,js}", "./scripts/*.{html,js}"],
   theme: {
+    maxWidth: {
+      desktop: "1440px",
+    },
     extend: {
       transparent: "transparent",
       current: "currentColor",

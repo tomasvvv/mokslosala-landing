@@ -7,10 +7,7 @@ html {
 }
 
 body {
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("assets/landing.png");
+  background-color: white;
 }
 
 @font-face {
@@ -27,11 +24,36 @@ body {
   @apply bg-white;
 }
 
+.fold {
+  min-height: 100vh;
+}
+
+.intro-wrapper {
+  background-image: url("../assets/landing.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fold {
+  @apply min-h-[100vh];
+}
+
+.second-image {
+  @apply min-h-[100vh] object-cover;
+}
+
+.entrance-image {
+  @apply min-h-[359px] md:min-h-[100vh] object-contain;
+}
+
+/* BEGANTI LINIJA */
+
 .running-line {
   width: 100%;
   overflow: hidden;
 
-  @apply fixed bottom-0;
+  @apply fixed top-0 md:relative;
 }
 
 .running-line-bg {
@@ -43,73 +65,13 @@ body {
 .running-line-placeholder {
   line-height: 1.2;
   font-family: "Gridas";
-  font-size: 220px;
+  font-size: 48px;
 }
 
 .running-line-text {
   color: black;
   font-family: "Gridas";
-  font-size: 220px;
-  white-space: nowrap;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  line-height: 1.4;
-}
-
-.running-line2 {
-  width: 100%;
-  overflow: hidden;
-
-  @apply fixed bottom-[280px];
-}
-
-.running-line2-bg {
-  background: white;
-  width: 100%;
-  position: relative;
-}
-
-.running-line2-placeholder {
-  line-height: 1.2;
-  font-family: "Gridas";
-  font-size: 220px;
-}
-
-.running-line2-text {
-  color: black;
-  font-family: "Gridas";
-  font-size: 220px;
-  white-space: nowrap;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  line-height: 1.4;
-}
-
-.running-line3 {
-  width: 100%;
-  overflow: hidden;
-
-  @apply fixed bottom-[560px];
-}
-
-.running-line3-bg {
-  background: white;
-  width: 100%;
-  position: relative;
-}
-
-.running-line3-placeholder {
-  line-height: 1.2;
-  font-family: "Gridas";
-  font-size: 220px;
-}
-
-.running-line3-text {
-  color: black;
-  font-family: "Gridas";
-  font-size: 220px;
+  font-size: 48px;
   white-space: nowrap;
   position: absolute;
   left: 0;

@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "npx serve .",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  }
+}
