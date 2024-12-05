@@ -558,14 +558,6 @@ video {
   visibility: hidden;
 }
 
-.fixed {
-  position: fixed;
-}
-
-.relative {
-  position: relative;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -574,10 +566,6 @@ video {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.block {
-  display: block;
 }
 
 .flex {
@@ -697,7 +685,7 @@ body {
 @font-face {
   font-family: "Gridas";
 
-  src: url("fonts/MSDotGrid-Regular.woff") format("woff");
+  src: url("/fonts/MSDotGrid-Regular.woff") format("woff");
 
   font-weight: normal;
 
@@ -831,6 +819,7 @@ body {
 @media (min-width: 768px) {
   .running-line {
     position: relative;
+    margin-top: -58px;
   }
 }
 

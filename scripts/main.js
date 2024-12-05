@@ -53,26 +53,4 @@ $(document).ready(function () {
       $line.css("left", `${newLeft}px`);
     }
   }, INTERVAL);
-
-  if ($(window).width() >= 650) {
-    const $footer = $("footer");
-    const $runningLine = $(".running-line");
-
-    const checkFooterVisibility = () => {
-      const footerTop = $footer.offset().top;
-      const footerBottom = footerTop + $footer.outerHeight();
-      const windowBottom = $(window).scrollTop() + $(window).height();
-
-      if (windowBottom >= footerTop && $(window).scrollTop() <= footerBottom) {
-        $runningLine.css("position", "relative");
-        $(".running-line-buffer").css("display", "none");
-      } else {
-        $runningLine.css("position", "fixed");
-        $(".running-line-buffer").css("display", "block");
-      }
-    };
-
-    $(window).on("scroll", checkFooterVisibility);
-    checkFooterVisibility();
-  }
 });

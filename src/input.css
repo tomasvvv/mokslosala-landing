@@ -12,7 +12,7 @@ body {
 
 @font-face {
   font-family: "Gridas";
-  src: url("fonts/MSDotGrid-Regular.woff") format("woff");
+  src: url("/fonts/MSDotGrid-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -103,6 +103,7 @@ body {
   overflow: hidden;
 
   @apply fixed top-0 md:relative;
+  @apply md:mt-[-58px];
 }
 
 .running-line-bg {
