@@ -11,7 +11,7 @@
   <script src="scripts/menu.js"></script>
   <link rel="stylesheet" href="./src/output.css" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="theme-color" content="#ffffff" />
 
   <body>
@@ -54,13 +54,15 @@
           </div>
 
           <div class="fixed top-0 left-0 backdrop-blur-[64px] w-full bg-white/20 py-14 px-4 hidden overflow-hidden" id="mobile-navigation">
-            <div class="flex flex-col space-y-4 mt-auto w-full">
-              <div class="button w-[180px]">Instagram</div>
-              <div class="button w-[180px]">Facebook</div>
-              <div class="button w-[180px]">Kontaktai</div>
-              <div class="flex flex-row w-full justify-between items-center">
-                <a href="http://bilietai.mokslosala.lt"><div class="button !bg-science-green min-w-[240px]">Bilietai</div> </a>
-                <img src="assets/close_burger.png" id="close-burger" />
+            <div class="w-full h-full relative">
+              <div class="flex flex-col space-y-4 mt-auto w-full absolute bottom-0">
+                <div class="button w-[180px]">Instagram</div>
+                <div class="button w-[180px]">Facebook</div>
+                <div class="button w-[180px]">Kontaktai</div>
+                <div class="flex flex-row w-full justify-between items-center">
+                  <a href="http://bilietai.mokslosala.lt"><div class="button !bg-science-green min-w-[240px]">Bilietai</div> </a>
+                  <img src="assets/close_burger.png" id="close-burger" />
+                </div>
               </div>
             </div>
           </div>

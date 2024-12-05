@@ -566,6 +566,10 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -576,6 +580,10 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .mx-auto {
@@ -598,6 +606,10 @@ video {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
