@@ -11,7 +11,8 @@
   <script src="scripts/menu.js"></script>
   <link rel="stylesheet" href="./src/output.css" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0" />
+  <meta name="theme-color" content="#ffffff" />
 
   <body>
     <div class="fold intro-wrapper flex">
@@ -52,7 +53,7 @@
             <img src="assets/open_burger.png" id="open-burger" />
           </div>
 
-          <div class="fixed top-0 left-0 backdrop-blur-sm w-full bg-white/20 py-14 px-4 hidden" id="mobile-navigation">
+          <div class="fixed top-0 left-0 backdrop-blur-[64px] w-full bg-white/20 py-14 px-4 hidden overflow-hidden" id="mobile-navigation">
             <div class="flex flex-col space-y-4 mt-auto w-full">
               <div class="button w-[180px]">Instagram</div>
               <div class="button w-[180px]">Facebook</div>
@@ -106,10 +107,13 @@
 
     <footer class="bg-black text-white p-4">
       <div class="max-w-desktop mx-auto break-words flex h-full min-h-[50vh] md:min-h-[100vh] flex-col">
-        <h3 class="text-lg md:text-4xl leading-none">
-          Aplankykite<br />
-          dabar!
-        </h3>
+        <div class="md:flex md:w-full md:justify-between">
+          <h3 class="text-lg md:text-4xl leading-none">
+            Aplankykite<br />
+            dabar!
+          </h3>
+          <img src="assets/arrow.png" height="auto" width="100%" class="w-[80%] mt-12 mb-4 md:my-0 max-w-[250px] md:w-[195px] h-auto object-contain" />
+        </div>
         <a class="text-lg md:text-xl mt-auto" href="mailto:info@mokslosala.lt">info@mokslosala.lt</a>
       </div>
     </footer>

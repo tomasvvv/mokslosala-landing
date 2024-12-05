@@ -129,3 +129,13 @@ body {
   bottom: 0;
   line-height: 1.4;
 }
+
+#mobile-navigation {
+  height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  #mobile-navigation {
+    height: 100dvh;
+  }
+}

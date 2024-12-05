@@ -588,6 +588,14 @@ video {
   margin-bottom: auto;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-auto {
   margin-top: auto;
 }
@@ -600,16 +608,24 @@ video {
   display: none;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-full {
   height: 100%;
 }
 
-.h-\[100vh\] {
-  height: 100vh;
-}
-
 .min-h-\[50vh\] {
   min-height: 50vh;
+}
+
+.w-\[180px\] {
+  width: 180px;
+}
+
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .w-fit {
@@ -621,24 +637,12 @@ video {
   width: 100%;
 }
 
-.w-\[100vw\] {
-  width: 100vw;
-}
-
-.w-\[140px\] {
-  width: 140px;
-}
-
-.w-\[180px\] {
-  width: 180px;
-}
-
-.min-w-\[200px\] {
-  min-width: 200px;
-}
-
 .min-w-\[240px\] {
   min-width: 240px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .max-w-desktop {
@@ -683,18 +687,12 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .break-words {
   overflow-wrap: break-word;
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
-
-.bg-science-green {
-  --tw-bg-opacity: 1;
-  background-color: rgb(184 246 64 / var(--tw-bg-opacity, 1));
 }
 
 .\!bg-science-green {
@@ -702,12 +700,27 @@ video {
   background-color: rgb(184 246 64 / var(--tw-bg-opacity, 1)) !important;
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-white\/20 {
   background-color: rgb(255 255 255 / 0.2);
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-\[20px\] {
@@ -728,11 +741,6 @@ video {
 .py-\[28px\] {
   padding-top: 28px;
   padding-bottom: 28px;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .pt-14 {
@@ -768,8 +776,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.backdrop-blur-sm {
-  --tw-backdrop-blur: blur(4px);
+.backdrop-blur-\[64px\] {
+  --tw-backdrop-blur: blur(64px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -951,9 +959,28 @@ body {
   line-height: 1.4;
 }
 
+#mobile-navigation {
+  height: 100vh;
+}
+
+@supports (height: 100dvh) {
+  #mobile-navigation {
+    height: 100dvh;
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .md\:block {
     display: block;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:hidden {
@@ -964,8 +991,20 @@ body {
     min-height: 100vh;
   }
 
+  .md\:w-\[195px\] {
+    width: 195px;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:space-x-12 > :not([hidden]) ~ :not([hidden]) {

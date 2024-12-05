@@ -1,22 +1,16 @@
 $(function () {
-  const resizeNav = () => {
-    $("#mobile-navigation").css("height", $(window).height() + "px");
-  };
-
-  $(window).on("resize", resizeNav);
-
   const handleOpen = () => {
     $("html").css("overflow", "hidden");
+    $("body").css("overflow", "hidden");
 
     $("#bottom-menu").css("visibility", "hidden");
     $("#mobile-navigation").removeClass("hidden");
     $("#mobile-navigation").addClass("flex");
-
-    resizeNav();
   };
 
   const handleClose = () => {
-    $("html").css("overflow", "unset");
+    $("html").css("overflow", "auto");
+    $("body").css("overflow", "auto");
 
     $("#bottom-menu").css("visibility", "visible");
     $("#mobile-navigation").addClass("hidden");
