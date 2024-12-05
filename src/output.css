@@ -613,6 +613,10 @@ video {
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
+.break-words {
+  overflow-wrap: break-word;
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
@@ -671,7 +675,7 @@ video {
 }
 
 html {
-  height: 100%;
+  min-height: 100vh;
 }
 
 body {
