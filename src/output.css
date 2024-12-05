@@ -154,7 +154,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: SuisseIntl;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -558,9 +558,26 @@ video {
   visibility: hidden;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -571,36 +588,17 @@ video {
   display: none;
 }
 
-.h-\[35px\] {
-  height: 35px;
+.h-\[1px\] {
+  height: 1px;
 }
 
-.w-\[122px\] {
-  width: 122px;
+.h-\[80\%\] {
+  height: 80%;
 }
 
-.w-\[129px\] {
-  width: 129px;
-}
-
-.w-\[141px\] {
-  width: 141px;
-}
-
-.w-\[144px\] {
-  width: 144px;
-}
-
-.w-\[150px\] {
-  width: 150px;
-}
-
-.w-\[159px\] {
-  width: 159px;
-}
-
-.w-\[35px\] {
-  width: 35px;
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .w-full {
@@ -609,6 +607,14 @@ video {
 
 .max-w-desktop {
   max-width: 1440px;
+}
+
+.resize {
+  resize: both;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .justify-between {
@@ -621,10 +627,10 @@ video {
   margin-left: calc(10px * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+.space-y-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
 .bg-black {
@@ -651,18 +657,28 @@ video {
   padding-bottom: 28px;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .pt-\[80px\] {
   padding-top: 80px;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-base {
+  font-size: 16px;
+}
+
+.text-lg {
+  font-size: 32px;
 }
 
 .text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 63px;
+}
+
+.leading-tight {
+  line-height: 1.25;
 }
 
 .text-white {
@@ -681,18 +697,93 @@ body {
 @font-face {
   font-family: "Gridas";
 
-  src: url("fonts/MSDotGrid-Regular.woff");
+  src: url("fonts/MSDotGrid-Regular.woff") format("woff");
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+
+  src: url("/fonts/SuisseIntl-Regular.woff") format("woff");
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+
+  src: url("/fonts/SuisseIntl-Bold.woff") format("woff");
+
+  font-weight: bold;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+
+  src: url("/fonts/SuisseIntl-Book.woff") format("woff");
+
+  font-weight: 300;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+
+  src: url("/fonts/SuisseIntl-Medium.woff") format("woff");
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SuisseIntl";
+
+  src: url("/fonts/SuisseIntl-Semibold.woff") format("woff");
+
+  font-weight: 600;
+
+  font-style: normal;
 }
 
 .button {
   border-width: 1px;
   border-color: rgb(0 0 0 / 0.2);
   border-radius: 100px;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 1;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.625rem;
+  padding-right: 3rem;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-.button-placeholder {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+.button.round {
+  height: 35px;
+  width: 35px;
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: rgba(184, 246, 64, 0.8);
 }
 
 .fold {
@@ -771,8 +862,20 @@ body {
     display: block;
   }
 
-  .md\:flex-col {
-    flex-direction: column;
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(3rem * var(--tw-space-x-reverse));
+    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .md\:py-2 {
@@ -780,7 +883,23 @@ body {
     padding-bottom: 0.5rem;
   }
 
+  .md\:pt-0 {
+    padding-top: 0px;
+  }
+
   .md\:pt-\[unset\] {
     padding-top: unset;
+  }
+
+  .md\:text-4xl {
+    font-size: 190px;
+  }
+
+  .md\:text-lg {
+    font-size: 32px;
+  }
+
+  .md\:text-xl {
+    font-size: 63px;
   }
 }

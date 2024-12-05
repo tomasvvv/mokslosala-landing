@@ -10,33 +10,31 @@
   <link rel="stylesheet" href="./src/output.css" />
 
   <body>
-    <div class="fold intro-wrapper">
+    <div class="fold intro-wrapper h-[1px] flex">
       <div class="max-w-desktop mx-auto">
         <header class="px-[20px] py-[28px] hidden md:block">
           <div class="flex justify-between w-full">
             <div class="flex space-x-[10px]">
-              <div class="button button-placeholder w-[144px]"></div>
-              <div class="button button-placeholder w-[122px]"></div>
-              <div class="button button-placeholder w-[129px]"></div>
-              <div class="button button-placeholder w-[159px]"></div>
-              <div class="button button-placeholder w-[150px]"></div>
+              <div class="button">Bilietai</div>
+              <div class="button">Kontaktai</div>
+              <div class="button">Instagram</div>
+              <div class="button">Facebook</div>
             </div>
             <div class="flex space-x-[10px]">
-              <div class="button button-placeholder w-[35px] h-[35px]"></div>
-              <div class="button button-placeholder w-[141px]"></div>
+              <div class="button round">EN</div>
             </div>
           </div>
         </header>
 
-        <div class="p-4 pt-[80px] md:pt-[unset]">
-          <h3 class="text-4xl">O jei žinotume daugiau?</h3>
-          <div class="flex md:flex-col space-y-4">
-            <p>
+        <div class="p-4 pt-[80px] md:pt-[unset] text-white flex flex-col justify-between leading-tight h-[80%]">
+          <h3 class="text-xl md:text-4xl">O jei žinotume daugiau?</h3>
+          <div class="flex flex-col md:flex-row space-y-12 md:space-y-0 md:space-x-12 text-base md:text-lg pt-8 md:pt-0">
+            <p class="w-fit">
               <b>Darbo laikas:</b><br />
               Kasdien 10:00-19:00<br />
               Nedirbame pirmadieniais.
             </p>
-            <p>
+            <p class="w-fit">
               <b>Gruodžio mėnesį dirbame:</b><br />
               14-15, 17-22, 28-29 dienomis
             </p>
@@ -52,8 +50,8 @@
       </div>
     </div>
 
-    <div class="max-w-desktop mx-auto py-8 md:py-2 fold">
-      <p class="text-xl">
+    <div class="max-w-desktop mx-auto py-8 md:py-2 fold p-4 flex">
+      <p class="text-lg md:text-xl leading-tight my-auto py-8">
         Mokslo sala – tai pirmas mokslo ir inovacijų populiarinimo centras Lietuvoje. Čia lankytojų laukia net 140 objektų talpinanti ilgalaikė ekspozicija, modernus planetariumas,
         besikuriančios STEAM laboratorijos, įvairios kultūrinės ir edukacinės veiklos.
       </p>
@@ -61,32 +59,34 @@
 
     <img src="assets/second_image.png" width="100%" height="100%" class="second-image" />
 
-    <div class="max-w-desktop mx-auto fold">
-      <h4 class="text-xl">Lankytojams:</h4>
-      <p>
-        <b>Darbo laikas</b><br />
-        Kasdien 10:00-19:00<br />
-        Nedirbame pirmadieniais.<br />
-        <br />
-        <b>Mokslo salos administracija</b><br />
-        I–V 09:00–18:00<br />
-        <a href="mailto:info@mokslosala.lt">info@mokslosala.lt</a><br />
-        <br />
-        Laukiame visų – Karaliaus Mindaugo pr. 50, Kaunas, 44307.
-        <br />
-        Mokslo salos erdvės pritaikytos žmonėms su negalia: įrengti liftai, specialūs tualetai, patogios ekspozicijų salės.
-      </p>
+    <div class="max-w-desktop mx-auto py-8 md:py-2 fold p-4 flex">
+      <div class="my-auto">
+        <h4 class="text-lg md:text-xl">Lankytojams:</h4>
+        <p class="py-8">
+          <b>Darbo laikas</b><br />
+          Kasdien 10:00-19:00<br />
+          Nedirbame pirmadieniais.<br />
+          <br />
+          <b>Mokslo salos administracija</b><br />
+          I–V 09:00–18:00<br />
+          <a href="mailto:info@mokslosala.lt">info@mokslosala.lt</a><br />
+          <br />
+          Laukiame visų – Karaliaus Mindaugo pr. 50, Kaunas, 44307.
+          <br />
+          Mokslo salos erdvės pritaikytos žmonėms su negalia: įrengti liftai, specialūs tualetai, patogios ekspozicijų salės.
+        </p>
+      </div>
     </div>
 
     <img src="assets/entrance.png" width="100%" height="100%" class="entrance-image" />
 
-    <footer class="bg-black text-white">
+    <footer class="bg-black text-white p-4 fold">
       <div class="max-w-desktop mx-auto">
-        <h3 class="text-4xl">
+        <h3 class="text-lg md:text-4xl">
           Aplankykite<br />
           dabar!
         </h3>
-        <a class="text-xl" href="mailto:info@mokslosala.lt">info@mokslosala.lt</a>
+        <a class="text-lg md:text-xl" href="mailto:info@mokslosala.lt">info@mokslosala.lt</a>
       </div>
     </footer>
   </body>

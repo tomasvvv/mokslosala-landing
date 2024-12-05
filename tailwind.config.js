@@ -2,8 +2,17 @@
 module.exports = {
   content: ["./*.{html,js}", "./scripts/*.{html,js}"],
   theme: {
+    fontFamily: {
+      sans: "SuisseIntl",
+    },
     maxWidth: {
       desktop: "1440px",
+    },
+    fontSize: {
+      base: "16px",
+      lg: "32px",
+      xl: "63px",
+      "4xl": "190px",
     },
     extend: {
       transparent: "transparent",

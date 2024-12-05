@@ -1,11 +1,11 @@
 const LINE_SELECTOR = ".running-line-text";
-const TEXT = "& mokslo sala > sveiki atvykę";
-const SPEED = 67;
-const INTERVAL = 125;
+const INTERVAL = 175;
+const MAX_ITERATIONS = 100;
 
-$(window).on("load", () => {
+$(document).ready(function () {
   const $line = $(LINE_SELECTOR);
-  const screenWidth = $(window).width();
+  let screenWidth = $(window).width();
+
   const initialText = $line.text();
 
   const pushText = () => {
@@ -13,10 +13,26 @@ $(window).on("load", () => {
     $line.text(newText);
   };
 
-  while ($line.width() < screenWidth) {
+  const reset = (initial = false) => {
+    let iterationCount = 0;
+    screenWidth = $(window).width();
+
+    if (!initial) {
+      $line.text(initialText);
+      $line.css("left", "0px");
+    }
+
+    while ($line.width() < screenWidth && iterationCount < MAX_ITERATIONS) {
+      pushText();
+    }
     pushText();
-  }
-  pushText();
+  };
+
+  reset(true);
+
+  $(window).on("resize", () => {
+    reset(false);
+  });
 
   let oddEvenTracker = 1;
 
@@ -25,106 +41,38 @@ $(window).on("load", () => {
 
     oddEvenTracker = (oddEvenTracker + 1) % 2;
 
-    const newLeft = currentLeft - (oddEvenTracker ? 27.9 : 28.0);
+    const newLeft = currentLeft - (oddEvenTracker ? 13.9 : 14.0);
 
     if ($line.width() + newLeft < screenWidth) {
       pushText();
     }
 
-    $line.css("left", `${newLeft}px`);
+    if (newLeft < -20000) {
+      reset();
+    } else {
+      $line.css("left", `${newLeft}px`);
+    }
   }, INTERVAL);
-});
 
-// $(window).on("load", () => {
-//   const $line = $(LINE_SELECTOR);
-//   const screenWidth = $(window).width();
-//   const initialText = $line.text();
+  if ($(window).width() >= 650) {
+    const $footer = $("footer");
+    const $runningLine = $(".running-line");
 
-//   const pushText = () => {
-//     const newText = $line.text() + " " + initialText;
-//     $line.text(newText);
-//   };
+    const checkFooterVisibility = () => {
+      const footerTop = $footer.offset().top;
+      const footerBottom = footerTop + $footer.outerHeight();
+      const windowBottom = $(window).scrollTop() + $(window).height();
 
-//   while ($line.width() < screenWidth) {
-//     pushText();
-//   }
-//   pushText();
+      if (windowBottom >= footerTop && $(window).scrollTop() <= footerBottom) {
+        $runningLine.css("position", "relative");
+        $(".running-line-buffer").css("display", "none");
+      } else {
+        $runningLine.css("position", "fixed");
+        $(".running-line-buffer").css("display", "block");
+      }
+    };
 
-//   let oddEvenTracker = 1;
-
-//   setInterval(() => {
-//     const currentLeft = parseInt($line.css("left").split("px")[0]) || 0;
-
-//     oddEvenTracker = (oddEvenTracker + 1) % 2;
-
-//     const newLeft = currentLeft - (oddEvenTracker ? 27.9 : 28.0);
-
-//     if ($line.width() + newLeft < screenWidth) {
-//       pushText();
-//     }
-
-//     $line.css("left", `${newLeft}px`);
-//   }, INTERVAL);
-// });
-
-$(window).on("load", () => {
-  const $line = $(".running-line2-text");
-  const screenWidth = $(window).width();
-  const initialText = $line.text();
-
-  const pushText = () => {
-    const newText = $line.text() + " " + initialText;
-    $line.text(newText);
-  };
-
-  while ($line.width() < screenWidth) {
-    pushText();
+    $(window).on("scroll", checkFooterVisibility);
+    checkFooterVisibility();
   }
-  pushText();
-
-  let oddEvenTracker = 1;
-
-  setInterval(() => {
-    const currentLeft = parseInt($line.css("left").split("px")[0]) || 0;
-
-    oddEvenTracker = (oddEvenTracker + 1) % 2;
-
-    const newLeft = currentLeft - (oddEvenTracker ? 137.9 : 138.0);
-
-    if ($line.width() + newLeft < screenWidth) {
-      pushText();
-    }
-
-    $line.css("left", `${newLeft}px`);
-  }, INTERVAL);
-});
-
-$(window).on("load", () => {
-  const $line = $(".running-line3-text");
-  const screenWidth = $(window).width();
-  const initialText = $line.text();
-
-  const pushText = () => {
-    const newText = $line.text() + " " + initialText;
-    $line.text(newText);
-  };
-
-  while ($line.width() < screenWidth) {
-    pushText();
-  }
-  pushText();
-
-  let oddEvenTracker = 1;
-
-  setInterval(() => {
-    const currentLeft = parseInt($line.css("left").split("px")[0]) || 0;
-
-    const newLeft = currentLeft - 1;
-
-    if ($line.width() + newLeft < screenWidth) {
-      pushText();
-    }
-
-    $line.css("left", `${newLeft}px`);
-  }, 10);
 });
