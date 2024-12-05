@@ -70,11 +70,12 @@ body {
 }
 
 .button:hover {
-  background-color: rgba(184, 246, 64, 0.8);
+  @apply bg-science-green/80;
 }
 
 .fold {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .intro-wrapper {
@@ -93,7 +94,7 @@ body {
 }
 
 .entrance-image {
-  @apply min-h-[359px] md:min-h-[100vh] object-contain;
+  @apply min-h-[360px] md:min-h-[100vh] object-cover md:object-contain object-left;
 }
 
 /* BEGANTI LINIJA */

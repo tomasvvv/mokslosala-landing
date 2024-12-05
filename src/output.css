@@ -554,8 +554,28 @@ video {
   display: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .invisible {
   visibility: hidden;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .mx-auto {
@@ -568,12 +588,28 @@ video {
   margin-bottom: auto;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.min-h-\[50vh\] {
+  min-height: 50vh;
 }
 
 .w-fit {
@@ -585,6 +621,26 @@ video {
   width: 100%;
 }
 
+.w-\[100vw\] {
+  width: 100vw;
+}
+
+.w-\[140px\] {
+  width: 140px;
+}
+
+.w-\[180px\] {
+  width: 180px;
+}
+
+.min-w-\[200px\] {
+  min-width: 200px;
+}
+
+.min-w-\[240px\] {
+  min-width: 240px;
+}
+
 .max-w-desktop {
   max-width: 1440px;
 }
@@ -593,8 +649,16 @@ video {
   resize: both;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .justify-between {
@@ -613,6 +677,12 @@ video {
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .break-words {
   overflow-wrap: break-word;
 }
@@ -622,6 +692,20 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-science-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(184 246 64 / var(--tw-bg-opacity, 1));
+}
+
+.\!bg-science-green {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(184 246 64 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-white\/20 {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -629,6 +713,11 @@ video {
 .px-\[20px\] {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .py-8 {
@@ -641,12 +730,17 @@ video {
   padding-bottom: 28px;
 }
 
-.pt-8 {
-  padding-top: 2rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.pt-\[80px\] {
-  padding-top: 80px;
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
+.pt-\[32px\] {
+  padding-top: 32px;
 }
 
 .text-base {
@@ -672,6 +766,12 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 html {
@@ -771,11 +871,12 @@ body {
 }
 
 .button:hover {
-  background-color: rgba(184, 246, 64, 0.8);
+  background-color: rgb(184 246 64 / 0.8);
 }
 
 .fold {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .intro-wrapper {
@@ -796,14 +897,18 @@ body {
 }
 
 .entrance-image {
-  min-height: 359px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  min-height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
 }
 
 @media (min-width: 768px) {
   .entrance-image {
     min-height: 100vh;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 
@@ -851,6 +956,14 @@ body {
     display: block;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:min-h-\[100vh\] {
+    min-height: 100vh;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -872,12 +985,20 @@ body {
     padding-bottom: 0.5rem;
   }
 
+  .md\:pb-\[200px\] {
+    padding-bottom: 200px;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }
 
-  .md\:pt-\[unset\] {
-    padding-top: unset;
+  .md\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .md\:pt-\[140px\] {
+    padding-top: 140px;
   }
 
   .md\:text-4xl {

@@ -2,7 +2,7 @@ const LINE_SELECTOR = ".running-line-text";
 const INTERVAL = 150;
 const MAX_ITERATIONS = 100;
 
-$(document).ready(function () {
+$(function () {
   const $line = $(LINE_SELECTOR);
   let screenWidth = $(window).width();
 
@@ -24,19 +24,26 @@ $(document).ready(function () {
 
     while ($line.width() < screenWidth && iterationCount < MAX_ITERATIONS) {
       pushText();
+      iterationCount++;
     }
     pushText();
   };
 
   reset(true);
 
+  let lastWidth = $(window).width();
+
   $(window).on("resize", () => {
-    reset(false);
+    const currentWidth = $(window).width();
+    if (currentWidth !== lastWidth) {
+      lastWidth = currentWidth;
+      reset(false);
+    }
   });
 
   let oddEvenTracker = 1;
 
-  setInterval(() => {
+  const intervalId = setInterval(() => {
     const currentLeft = parseInt($line.css("left").split("px")[0]) || 0;
 
     oddEvenTracker = (oddEvenTracker + 1) % 2;
@@ -47,10 +54,14 @@ $(document).ready(function () {
       pushText();
     }
 
-    if (newLeft < -20000) {
+    if (newLeft < -10000) {
       reset();
     } else {
       $line.css("left", `${newLeft}px`);
     }
   }, INTERVAL);
+
+  $(window).on("beforeunload", () => {
+    clearInterval(intervalId);
+  });
 });
