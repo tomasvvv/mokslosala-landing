@@ -576,14 +576,6 @@ video {
   display: none;
 }
 
-.h-\[1px\] {
-  height: 1px;
-}
-
-.h-\[80\%\] {
-  height: 80%;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -665,6 +657,10 @@ video {
   font-size: 63px;
 }
 
+.leading-none {
+  line-height: 1;
+}
+
 .leading-tight {
   line-height: 1.25;
 }
@@ -685,7 +681,7 @@ body {
 @font-face {
   font-family: "Gridas";
 
-  src: url("/fonts/MSDotGrid-Regular.woff") format("woff");
+  src: url("fonts/MSDotGrid-Regular.woff") format("woff");
 
   font-weight: normal;
 
@@ -695,7 +691,7 @@ body {
 @font-face {
   font-family: "SuisseIntl";
 
-  src: url("/fonts/SuisseIntl-Regular.woff") format("woff");
+  src: url("fonts/SuisseIntl-Regular.woff") format("woff");
 
   font-weight: normal;
 
@@ -705,7 +701,7 @@ body {
 @font-face {
   font-family: "SuisseIntl";
 
-  src: url("/fonts/SuisseIntl-Bold.woff") format("woff");
+  src: url("fonts/SuisseIntl-Bold.woff") format("woff");
 
   font-weight: bold;
 
@@ -715,7 +711,7 @@ body {
 @font-face {
   font-family: "SuisseIntl";
 
-  src: url("/fonts/SuisseIntl-Book.woff") format("woff");
+  src: url("fonts/SuisseIntl-Book.woff") format("woff");
 
   font-weight: 300;
 
@@ -725,7 +721,7 @@ body {
 @font-face {
   font-family: "SuisseIntl";
 
-  src: url("/fonts/SuisseIntl-Medium.woff") format("woff");
+  src: url("fonts/SuisseIntl-Medium.woff") format("woff");
 
   font-weight: 500;
 
@@ -735,7 +731,7 @@ body {
 @font-face {
   font-family: "SuisseIntl";
 
-  src: url("/fonts/SuisseIntl-Semibold.woff") format("woff");
+  src: url("fonts/SuisseIntl-Semibold.woff") format("woff");
 
   font-weight: 600;
 

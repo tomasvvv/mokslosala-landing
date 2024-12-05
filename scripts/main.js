@@ -1,5 +1,5 @@
 const LINE_SELECTOR = ".running-line-text";
-const INTERVAL = 175;
+const INTERVAL = 150;
 const MAX_ITERATIONS = 100;
 
 $(document).ready(function () {
@@ -41,7 +41,7 @@ $(document).ready(function () {
 
     oddEvenTracker = (oddEvenTracker + 1) % 2;
 
-    const newLeft = currentLeft - (oddEvenTracker ? 13.9 : 14.0);
+    const newLeft = currentLeft - 12;
 
     if ($line.width() + newLeft < screenWidth) {
       pushText();
