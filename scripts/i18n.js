@@ -46,6 +46,10 @@ $(function () {
   // translate
   let language = window.localStorage.getItem("ms_temp_landing_lang") || "LT";
 
+  const setImgSrc = () => {
+    $(".entrance-image").attr("src", `assets/entrance_${language.toLowerCase()}.png`);
+  };
+
   const translate = () => {
     const translationIdx = language === "EN" ? 1 : 0;
     Object.keys(TRANSLATIONS).forEach((key) => {
@@ -53,15 +57,20 @@ $(function () {
     });
   };
 
-  translate();
+  const setLanguageLang = () => {
+    $(".language").html(language === "EN" ? "LT" : "EN");
+  };
 
   $(".language").on("click", function () {
     window.localStorage.setItem("ms_temp_landing_lang", language === "EN" ? "LT" : "EN");
     language = language === "EN" ? "LT" : "EN";
 
-    $(".language").html(language === "EN" ? "LT" : "EN");
+    setLanguageLang();
     translate();
+    setImgSrc();
   });
 
-  $(".language").html(language === "EN" ? "LT" : "EN");
+  translate();
+  setImgSrc();
+  setLanguageLang();
 });
