@@ -1,12 +1,4 @@
 $(function () {
-  let idx = 0;
-  // const colArray = ["#ff0000", "#ff00ff", "#00ff00"];
-
-  // $(window).on("resize", () => {
-  //   $("#mobile-navigation").css("background-color", colArray[idx]);
-  //   idx = (idx + 1) % 3;
-  // });
-
   const handleOpen = () => {
     $("html").css("overflow", "hidden");
     $("body").css("overflow", "hidden");
@@ -31,5 +23,25 @@ $(function () {
 
   $("#close-burger").on("click", () => {
     handleClose();
+  });
+
+  const isMobile = $(window).width() < 768;
+
+  $(window).on("scroll", () => {
+    if (!isMobile) return;
+
+    const scrollThresholdMobile = $("#scroll-treshold-mobile").offset().top - 80;
+    const currentScroll = $(window).scrollTop();
+
+    if (currentScroll > scrollThresholdMobile) {
+      $("#bottom-menu").css("position", "fixed");
+      $("#bottom-menu").css("top", "80px");
+      $("#bottom-menu").css("left", "0");
+      $("#bottom-menu").css("padding", "0 16px");
+    } else {
+      $("#bottom-menu").css("position", "absolute");
+      $("#bottom-menu").css("top", "unset");
+      $("#bottom-menu").css("padding", "unset");
+    }
   });
 });

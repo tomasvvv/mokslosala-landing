@@ -18,7 +18,8 @@
   <body>
     <div class="fold intro-wrapper flex">
       <div class="max-w-desktop mx-auto pt-[32px] md:pt-0 relative w-full">
-        <header class="px-[20px] py-[28px] hidden md:block w-full">
+        <div class="h-[90px] hidden md:block"></div>
+        <header id="desktop-menu" class="px-[20px] py-[28px] hidden md:block w-full fixed top-0 max-w-desktop mx-auto left-1/2 -translate-x-1/2">
           <div class="flex justify-between w-full">
             <div class="flex space-x-[10px]">
               <div class="button" data-translate="button-tickets">Bilietai</div>
@@ -27,7 +28,7 @@
               <div class="button">Facebook</div>
             </div>
             <div class="flex space-x-[10px]">
-              <div class="button round" id="language">EN</div>
+              <div class="button round language">EN</div>
             </div>
           </div>
         </header>
@@ -47,15 +48,20 @@
             </p>
           </div>
 
-          <div id="bottom-menu" class="flex justify-between w-full items-center md:hidden">
-            <a href="http://bilietai.mokslosala.lt">
-              <div class="button !bg-science-green min-w-[240px]" data-translate="button-tickets">Bilietai</div>
-            </a>
-            <img src="assets/open_burger.png" id="open-burger" />
+          <div id="scroll-treshold-mobile" class="block md:hidden relative h-[34px]">
+            <div id="bottom-menu" class="flex justify-between w-full items-center md:hidden absolute">
+              <a href="http://bilietai.mokslosala.lt">
+                <div class="button !bg-science-green min-w-[240px]" data-translate="button-tickets">Bilietai</div>
+              </a>
+              <img src="assets/open_burger.png" id="open-burger" />
+            </div>
           </div>
 
           <div class="fixed top-0 left-0 backdrop-blur-[64px] w-full bg-white/20 py-14 px-4 hidden overflow-hidden" id="mobile-navigation">
             <div class="w-full h-full relative">
+              <div class="absolute top-[80px]">
+                <div class="button round language">EN</div>
+              </div>
               <div class="flex flex-col space-y-4 mt-auto w-full absolute bottom-0">
                 <div class="button w-[180px]">Instagram</div>
                 <div class="button w-[180px]">Facebook</div>

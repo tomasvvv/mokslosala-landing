@@ -19,6 +19,7 @@ const TRANSLATIONS = {
           <a href="mailto:info@mokslosala.lt">info@mokslosala.lt</a><br />
           <br />
           Laukiame visų - Karaliaus Mindaugo pr. 50, Kaunas, 44307.
+          <br/>
           <br />
           Mokslo salos erdvės pritaikytos žmonėms su negalia: įrengti liftai, specialūs tualetai, patogios ekspozicijų salės.`,
     `
@@ -32,6 +33,7 @@ const TRANSLATIONS = {
           <br />
           We welcome everyone at:<br/>
           Karaliaus Mindaugo prospektas 50, Kaunas, 44307
+          <br/>
           <br />
           Science Island spaces are fully accessible for visitors with disabilities, featuring elevators, specially designed restrooms, and accessible exhibition space.
     
@@ -42,7 +44,6 @@ const TRANSLATIONS = {
 
 $(function () {
   // translate
-
   let language = window.localStorage.getItem("ms_temp_landing_lang") || "LT";
 
   const translate = () => {
@@ -54,13 +55,13 @@ $(function () {
 
   translate();
 
-  $("#language").on("click", () => {
+  $(".language").on("click", function () {
     window.localStorage.setItem("ms_temp_landing_lang", language === "EN" ? "LT" : "EN");
     language = language === "EN" ? "LT" : "EN";
 
-    $("#language").html(language === "EN" ? "LT" : "EN");
+    $(".language").html(language === "EN" ? "LT" : "EN");
     translate();
   });
 
-  $("#language").html(language === "EN" ? "LT" : "EN");
+  $(".language").html(language === "EN" ? "LT" : "EN");
 });
