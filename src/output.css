@@ -574,28 +574,24 @@ video {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
 }
 
 .top-0 {
   top: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .top-\[80px\] {
   top: 80px;
-}
-
-.top-\[40px\] {
-  top: 40px;
-}
-
-.left-1\/2 {
-  left: 50%;
 }
 
 .z-10 {
@@ -636,24 +632,20 @@ video {
   display: none;
 }
 
+.h-\[34px\] {
+  height: 34px;
+}
+
+.h-\[90px\] {
+  height: 90px;
+}
+
 .h-auto {
   height: auto;
 }
 
 .h-full {
   height: 100%;
-}
-
-.h-\[34px\] {
-  height: 34px;
-}
-
-.h-\[91px\] {
-  height: 91px;
-}
-
-.h-\[90px\] {
-  height: 90px;
 }
 
 .min-h-\[50vh\] {
@@ -933,7 +925,7 @@ body {
 }
 
 .intro-wrapper {
-  background-image: url("../assets/landing.png");
+  background-image: url("../assets/landing-min.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1081,8 +1073,8 @@ body {
     padding-top: 2rem;
   }
 
-  .md\:pt-\[140px\] {
-    padding-top: 140px;
+  .md\:pt-\[80px\] {
+    padding-top: 80px;
   }
 
   .md\:text-4xl {
@@ -1095,5 +1087,11 @@ body {
 
   .md\:text-xl {
     font-size: 63px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:pt-\[140px\] {
+    padding-top: 140px;
   }
 }
