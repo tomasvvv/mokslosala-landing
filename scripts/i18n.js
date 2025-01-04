@@ -3,10 +3,7 @@ const TRANSLATIONS = {
   "button-contacts": ["Kontaktai", "Contacts"],
   "heading-1": ["O jei žinotume daugiau?", "What if we knew more?"],
   "working-hours": ["<b>Darbo laikas</b><br/>Kasdien 10:00-19:00<br/>Nedirbame pirmadieniais", "<b>Opening hours</b><br/>Daily: 10:00-19:00</br>Closed on Mondays"],
-  "december-body": [
-    "<b>Gruodžio mėnesį dirbame</b><br/>13 d. 16 val. - ATIDARYMO ŠVENTĖ<br/>14-15, 17-22, 27-29 dienomis",
-    "<b>December 13th 4 pm - OPENING CELEBRATION</b><br/>We work on 14-15, 17-22, 27-29 December",
-  ],
+  "december-body": ["", ""],
   "intro-text": [
     "Mokslo sala - tai pirmas mokslo ir inovacijų populiarinimo centras Lietuvoje. Čia lankytojų laukia net 140 objektų talpinanti ilgalaikė ekspozicija, modernus planetariumas, besikuriančios STEAM laboratorijos, įvairios kultūrinės ir edukacinės veiklos.",
     "Science Island is Lithuania's first Science and Innovation Promotion Centre. With a permanent exhibition of 140 interactive installations, a state-of-the-art planetarium, emerging STEAM laboratories, and various cultural and educational activities.",
@@ -15,12 +12,9 @@ const TRANSLATIONS = {
   "for-visitors-body": [
     `<b>Darbo laikas</b><br />
           Kasdien 10:00-19:00<br />
-          Nedirbame pirmadieniais<br />
+          Nedirbame pirmadieniais<br /><br/>
+          Dėl didelio lankytojų srauto, rekomenduojama planuoti vizitą iš anksto, įsigyjant bilietus bei atvykstant juose nurodytu metu.<br/>
           <br />
-          <b>Gruodžio mėnesį dirbame</b><br/>
-          13 d. 16 val. - ATIDARYMO ŠVENTĖ<br/>
-          14-15, 17-22, 27-29 dienomis <br/>
-          <br/>
           <b>Administracija</b><br />
           I-V 09:00-18:00<br />
           <a href="mailto:info@mokslosala.lt" style="text-decoration:underline">info@mokslosala.lt</a><br />
@@ -34,9 +28,8 @@ const TRANSLATIONS = {
           Daily: 10:00-19:00<br />
           Closed on Mondays<br />
           <br/>
-          December 13th 4 pm - OPENING CELEBRATION<br/>
-          We work on 14-15, 17-22, 27-29 December <br/>
-          <br />
+          Due to the large flow of visitors, it is recommended to plan your visit in advance, by purchasing tickets and arriving at the time specified in them.<br/>
+          <br/>
           <b>Administration</b><br />
           Monday to Friday: 09:00-18:00<br />
           <a href="mailto:info@mokslosala.lt" style="text-decoration:underline">info@mokslosala.lt</a><br />
